@@ -1,0 +1,32 @@
+functions:
+  public_create_endpoint:
+    file: functions.js
+    entrypoint: createEndpoint
+    runtime: node8
+    executionModel: concurrent
+    env:
+      <<: &COMMON # for more info on yaml aliasing: https://github.com/cyklo/Bukkit-OtherBlocks/wiki/Aliases-(advanced-YAML-usage)
+        REDIS_PORT:
+        REDIS_HOST:
+        REDIS_PASSWORD:
+  public_read_endpoint:
+    file: functions.js
+    entrypoint: readEndpoint
+    runtime: node8
+    executionModel: concurrent
+    env:
+      <<: *COMMON
+  public_update_endpoint:
+    file: functions.js
+    entrypoint: updateEndpoint
+    runtime: node8
+    executionModel: concurrent
+    env:
+      <<: *COMMON
+  public_delete_endpoint:
+    file: functions.js
+    entrypoint: deleteEndpoint
+    runtime: node8
+    executionModel: concurrent
+    env:
+      <<: *COMMON

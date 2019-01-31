@@ -1,0 +1,23 @@
+{
+  "name": "binaris-redis-crud",
+  "version": "1.0.0",
+  "description": "Backend CRUD API leveraging Redis to store data.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "bn deploy public_create_endpoint && bn deploy public_read_endpoint && bn deploy public_update_endpoint && bn deploy public_delete_endpoint",
+    "remove": "bn remove public_create_endpoint && bn remove public_read_endpoint && bn remove public_update_endpoint && bn remove public_delete_endpoint",
+    "lint": "./node_modules/.bin/eslint -c .eslintrc.js ./"
+  },
+  "keywords": ["serverless", "redis", "crud", "binaris", "faas"],
+  "author": "Jake Langholz",
+  "dependencies": {
+    "ioredis": "^4.5.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.12.0"
+  }
+}
