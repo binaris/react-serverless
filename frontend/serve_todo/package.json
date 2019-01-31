@@ -1,0 +1,12 @@
+{
+  "name": "serve_todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mime-types": "^2.1.21",
+    "mz": "^2.7.0"
+  }
+}
