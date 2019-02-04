@@ -11,7 +11,7 @@
 
   For the next section you will need a Binaris account, if you already have one skip the following four steps.
 
-  1. Visit https://binaris.com/try
+  1. Visit [signup](https://binaris.com/signup?t=8CDa36)
   1. Follow the instructions and create your new Binaris account
   1. Install the CLI via `npm`
       ```bash
