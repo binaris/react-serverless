@@ -3,4 +3,3 @@ functions:
     file: function.js
     entrypoint: handler
     runtime: node8
-    executionModel: concurrent

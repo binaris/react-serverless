@@ -93,7 +93,7 @@ Then...
 ```bash
 $ mkdir backend
 $ cd backend
-$ bn create node8 public_create_endpoint --executionModel concurrent
+$ bn create node8 public_create_endpoint
 ```
 
 We will also rename our generated `function.js` file, since this will contain all four of our CRUD functions.
@@ -115,7 +115,6 @@ We'll update the `entrypoint` field of the function so it maps to the new functi
 -    entrypoint: handler
 +    entrypoint: create_endpoint
      runtime: node8
-     executionModel: concurrent
 ```
 
 Time to write our Redis CRUD code.
@@ -245,7 +244,6 @@ functions:
     file: functions.js
     entrypoint: create_endpoint
     runtime: node8
-    executionModel: concurrent
 ```
 
 </details> 
@@ -304,7 +302,6 @@ functions:
    file: src/create.js
    entrypoint: handler
    runtime: node8
-   executionModel: concurrent
 +  env:
 +    <<: &COMMON
 +      REDIS_HOST:
@@ -367,7 +364,6 @@ Time to create our other three functions. First, let's update our `binaris.yml` 
      file: functions.js
      entrypoint: create_endpoint
      runtime: node8
-     executionModel: concurrent
      env:
        <<: &COMMON
          REDIS_HOST:
@@ -377,21 +373,18 @@ Time to create our other three functions. First, let's update our `binaris.yml` 
 +    file: functions.js
 +    entrypoint: read_endpoint
 +    runtime: node8
-+    executionModel: concurrent
 +    env:
 +      <<: *COMMON
 +  public_update_endpoint:
 +    file: functions.js
 +    entrypoint: update_endpoint
 +    runtime: node8
-+    executionModel: concurrent
 +    env:
 +      <<: *COMMON
 +  public_delete_endpoint:
 +    file: functions.js
 +    entrypoint: delete_endpoint
 +    runtime: node8
-+    executionModel: concurrent
 +    env:
 +      <<: *COMMON
 ```
@@ -443,7 +436,6 @@ functions:
     file: functions.js
     entrypoint: create_endpoint
     runtime: node8
-    executionModel: concurrent
     env:
       <<: &COMMON
         REDIS_HOST:
@@ -453,21 +445,18 @@ functions:
     file: functions.js
     entrypoint: read_endpoint
     runtime: node8
-    executionModel: concurrent
     env:
       <<: *COMMON
   public_update_endpoint:
     file: functions.js
     entrypoint: update_endpoint
     runtime: node8
-    executionModel: concurrent
     env:
       <<: *COMMON
   public_delete_endpoint:
     file: functions.js
     entrypoint: delete_endpoint
     runtime: node8
-    executionModel: concurrent
     env:
       <<: *COMMON
 ```
@@ -635,7 +624,6 @@ functions:
     file: functions.js
     entrypoint: create_endpoint
     runtime: node8
-    executionModel: concurrent
     env:
       <<: &COMMON
         REDIS_HOST:
@@ -645,21 +633,18 @@ functions:
     file: functions.js
     entrypoint: read_endpoint
     runtime: node8
-    executionModel: concurrent
     env:
       <<: *COMMON
   public_update_endpoint:
     file: functions.js
     entrypoint: update_endpoint
     runtime: node8
-    executionModel: concurrent
     env:
       <<: *COMMON
   public_delete_endpoint:
     file: functions.js
     entrypoint: delete_endpoint
     runtime: node8
-    executionModel: concurrent
     env:
       <<: *COMMON
 ```
