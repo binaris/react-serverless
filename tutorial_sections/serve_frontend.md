@@ -63,7 +63,7 @@ Navigate into the `serve_todo` directory and use `bn create` to generate the tem
 
 ```bash
 $ cd serve_todo
-$ bn create node8 public_serve_todo --executionModel concurrent
+$ bn create node8 public_serve_todo
 
 Created function public_serve_todo in /home/ubuntu/todo/frontend/serve_todo
   (use "bn deploy public_serve_todo" to deploy the function)
