@@ -9,14 +9,20 @@
     "remove": "bn remove public_create_endpoint && bn remove public_read_endpoint && bn remove public_update_endpoint && bn remove public_delete_endpoint",
     "lint": "./node_modules/.bin/eslint -c .eslintrc.js ./"
   },
-  "keywords": ["serverless", "redis", "crud", "binaris", "faas"],
+  "keywords": [
+    "serverless",
+    "redis",
+    "crud",
+    "binaris",
+    "faas"
+  ],
   "author": "Jake Langholz",
   "dependencies": {
     "ioredis": "^4.5.1",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
+    "eslint": "^4.18.2",
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-plugin-import": "^2.12.0"
   }
